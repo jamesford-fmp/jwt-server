@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jamesrford7/jwt-server/issues"
   },
-  "homepage": "https://github.com/jamesrford7/jwt-server#readme"
+  "homepage": "https://github.com/jamesrford7/jwt-server#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "express-jwt": "^5.1.0"
+  }
 }

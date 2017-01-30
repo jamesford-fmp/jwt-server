@@ -19,12 +19,9 @@ app.use(express_jwt({
 
 app.get('/protected',
   (req, res) => {
-    if(!req.user) {
-      console.log("No auth token, redirecting");
-      res.redirect('/jwt');
-    }
+    if(!req.user) return res.sendStatus(404);
     if(!req.user.admin) return res.sendStatus(401);
-    res.json(req.user);
+    res.send('<h2>Hi ' + req.user.name + '!<br></h2><h3>You have authority!</h3>');
   });
 
 app.get('/jwt',

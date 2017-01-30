@@ -27,11 +27,12 @@ app.get('/protected',
     res.json(req.user);
   });
 
-app.get('/jwt', (req, res) => {
-  let token = jwt.sign({name: 'James Ford', admin: true}, 'my-secret');
-  res.cookie('jwt_token', token, {httpOnly: true});
-  res.send(token);
-});
+app.get('/jwt',
+  (req, res) => {
+    let token = jwt.sign({name: 'James Ford', admin: true}, 'my-secret');
+    res.cookie('jwt_token', token, {httpOnly: true});
+    res.send(token);
+  });
 
 app.listen(port);
 console.log("Listening on port " + port);

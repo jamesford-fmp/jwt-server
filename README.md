@@ -1,6 +1,6 @@
 # jwt-server
 
-Very simple example of using express and express-jwt to issue a HMAC signed JWT within a cookie, that is then used on a protected endpoint.
+Very simple example of using express and express-jwt to issue a HMAC signed JWT within a cookie, that is then used on a protected endpoint to show the contents of the token
 
 1. ```npm install```
 2. ```npm start```
